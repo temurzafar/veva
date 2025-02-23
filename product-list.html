@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<!--Header-->
+<header class="header-main relative"> <!--Here the absolute class is changed to relative-->
+    <div class="container mx-auto py-7 max-xl:pt-3 max-xl:pb-16 max-xl:relative flex justify-between items-center">
+        <div class="xl:w-36 xl:mr-40 flex items-center">
+            <button id="mobile-menu-bar" class="xl:hidden mr-3">
+                <img src="assets/images/icons/mobile-menu-bar.svg" alt="">
+            </button>
+            <a href="#">
+                <img src="assets/images/logo.svg" alt="Logotype" class="xl:max-w-full max-w-[6.5rem]">
+            </a>
+            <a href="#" class="back-btn">
+                <img src="assets/images/icons/arrow-back-black.svg" alt="">
+                <span>Вернуться</span>
+            </a>
+        </div>
+        <div class="right-block flex items-center justify-between xl:w-[calc(100%-20rem)]">
+            <div class="menu max-xl:hidden">
+                <ul class="flex items-center">
+                    <li class="active"><a href="#">Главная</a></li>
+                    <li><a href="#">Магазин товаров</a></li>
+                </ul>
+            </div>
+            <div class="location xl:relative max-xl:absolute max-xl:left-0 max-lg:left-4 max-xl:bottom-0 max-xl:w-full max-lg:w-[calc(100%-2rem)]">
+                <button id="dropdownLocationButton" data-dropdown-toggle="dropdownLocationContent" type="button" class="header-btn-location">
+                    улица Мукими, 166
+                </button>
+                <div id="dropdownLocationContent" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow min-w-full">
+                    <ul class="py-2 text-sm text-black font-light" aria-labelledby="dropdownLocationButton">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">улица Мукими, 167</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">улица Мукими, 168</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile">
+                <button id="dropdownLanguageButton" data-dropdown-toggle="dropdownLanguageContent" type="button" class="flex items-center text-sm font-light text-black bg-white py-3 px-[1.125rem]">
+                    <span class="mr-2">Ру</span>
+                    <img src="assets/images/icons/arrow-down-lightblue.svg" alt="">
+                </button>
+                <button data-modal-target="login-modal" data-modal-toggle="login-modal" type="button" class="flex items-center text-sm font-light text-black bg-white py-2.5 px-[1.125rem]">
+                    <img src="assets/images/icons/profile-black.svg" alt="" class="xl:mr-2">
+                    <span class="max-xl:hidden">Войти в кабинет</span>
+                </button>
+                <button type="button" class="xl:flex hidden items-center text-sm font-light text-black bg-white p-2.5"><img src="assets/images/icons/logout-gray.svg" alt=""></button>
+            </div>
+            <div id="dropdownLanguageContent" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow">
+                <ul class="py-2 text-sm text-black font-light" aria-labelledby="dropdownLanguageButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">En</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">Uz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Added bottom wave except HOME PAGE-->
+    <div class="relative overflow-hidden max-xl:mt-5">
+        <img src="assets/images/header-bottom-shape.svg" alt="" class="animate-wave">
+    </div>
+</header>
+<!--Header End-->
+
+<!--Mobile Menu-->
+<div id="mobile-menu" class="xl:hidden">
+    <div class="content">
+        <button class="close"><img src="assets/images/icons/mobile-menu-close.svg" alt=""></button>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">Магазин товаров</a></li>
+                <li><a href="#">Договор оферты</a></li>
+                <li><a href="#">Сертификаты</a></li>
+                <li><a href="#" class="text-[#E9573F] font-bold">Выход</a></li>
+            </ul>
+        </nav>
+        <div class="bottom">
+            <p class="phone">
+                <span>Телефон:</span>
+                <a href="tel:+998 55 519 90 90">+998 55 519 90 90</a>
+            </p>
+            <p class="social-links">
+                <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt="Instagram"></a>
+            </p>
+        </div>
+    </div>
+    <div class="relative overflow-hidden">
+        <img src="assets/images/header-bottom-shape.svg" alt="" class="animate-wave">
+    </div>
+</div>
+<!--Mobile Menu End-->
+
+<!--Main Content-->
+<main class="relative">
+    <div class="product-list">
+        <div class="container mx-auto lg:pt-8 pt-5">
+
+            <!--Title-->
+            <h2 class="md:text-[2rem] text-2xl md:leading-10 font-bold text-black md:mb-12 mb-6">Магазин товаров</h2>
+            <!--Title End-->
+
+            <!--Tab Navs-->
+            <div class="tab-navs">
+                <ul>
+                    <li class="active"><a href="#">Бутилированная вода <span>1</span></a></li>
+                    <li><a href="#">Помпа <span>3</span></a></li>
+                    <li><a href="#">Кулер <span>5</span></a></li>
+                </ul>
+                <div class="dropdownMenuList">
+                    <button id="dropdownMenuListButton"
+                            data-dropdown-toggle="dropdownMenuListContent"
+                            type="button"
+                            class="">
+                        Бутилированная вода <span>1</span>
+                    </button>
+                    <div id="dropdownMenuListContent" class="z-10 hidden">
+                        <div aria-labelledby="dropdownMenuListButton">
+                            <a href="#">Помпа <span>3</span></a>
+                            <a href="#">Кулер <span>5</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tab Navs End-->
+
+            <!--Filters-->
+            <div class="product-list-filter md:mb-12 mb-6 max-md:p-4 max-md:bg-[#F2F4F7] max-md:rounded-[10px]">
+                <div class="md:flex items-center">
+                    <div class="custom-form-input md:mr-4 max-md:mb-2.5">
+                        <select class="!text-[#98A2B3] max-md:!bg-white">
+                            <option value="" disabled selected hidden>Производитель</option>
+                            <option value="">Artel</option>
+                            <option value="">Electronix</option>
+                        </select>
+                    </div>
+                    <div class="custom-form-input md:mr-4 max-md:mb-2.5">
+                        <select class="!text-[#98A2B3] max-md:!bg-white">
+                            <option value="" disabled selected hidden>Мощность нагрева</option>
+                            <option value="">до +95°С</option>
+                            <option value="">до +85°С</option>
+                        </select>
+                    </div>
+                    <div class="custom-form-input md:mr-4 max-md:mb-2.5">
+                        <select class="!text-[#98A2B3] max-md:!bg-white">
+                            <option value="" disabled selected hidden>Мощность охлаждения</option>
+                            <option value="">до +5°С</option>
+                            <option value="">до +7°С</option>
+                        </select>
+                    </div>
+                    <div class="custom-form-input md:mr-4 max-md:mb-2.5">
+                        <select class="!text-[#98A2B3] max-md:!bg-white">
+                            <option value="" disabled selected hidden>Установка бутылки</option>
+                            <option value="">внизу</option>
+                            <option value="">сверху</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="md:hidden">
+                    <img src="assets/images/icons/filter-icon-black.svg" alt="">
+                    <span class="open">Открыть фильтр</span>
+                    <span class="close">Закрыть фильтр</span>
+                </button>
+            </div>
+            <!--Filters End-->
+
+            <!--Product List-->
+            <div class="grid xl:grid-cols-4 grid-cols-2 xl:gap-y-12 xl:gap-x-7 gap-[18px]">
+                <div class="product-list--item">
+                    <div class="content">
+                        <div class="top">
+                            <img src="assets/images/product1.png" alt="">
+                            <h4>Вода в бутилированной бутылке</h4>
+                            <p>18,9 л.</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="quantity-and-price">
+                                <div class="quantity">
+                                    <button>&nbsp;</button>
+                                    <span>1</span>
+                                    <button>&nbsp;</button>
+                                </div>
+                                <div class="price">
+                                    <span>Итоговая стоимость:</span>
+                                    <strong>15 000 сум</strong>
+                                </div>
+                            </div>
+                            <a href="#" class="add-to-basket">Добавить в корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list--item">
+                    <div class="content">
+                        <div class="top">
+                            <img src="assets/images/product2.png" alt="">
+                            <h4>Кулер для воды</h4>
+                            <p>Electronix YLR-FA-1590 Silver</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="info">
+                                <p><span>Нагрев</span><strong>есть</strong></p>
+                                <p><span>Мощность нагрева</span><strong>до +95°С</strong></p>
+                                <p><span>Охлаждение</span><strong>есть</strong></p>
+                                <p><span>Мощность охлаждения</span><strong>до +5°С - +7°С</strong></p>
+                                <p><span>Установка бутылки</span><strong>внизу</strong></p>
+                            </div>
+                            <div class="quantity-and-price">
+                                <div class="quantity">
+                                    <button>&nbsp;</button>
+                                    <span>1</span>
+                                    <button>&nbsp;</button>
+                                </div>
+                                <div class="price">
+                                    <span>Итоговая стоимость:</span>
+                                    <strong>15 000 сум</strong>
+                                </div>
+                            </div>
+                            <a href="#" class="add-to-basket">Добавить в корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list--item">
+                    <div class="content">
+                        <div class="top">
+                            <img src="assets/images/product3.png" alt="">
+                            <h4>Кулер для воды</h4>
+                            <p>Artel </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="info">
+                                <p><span>Нагрев</span><strong>есть</strong></p>
+                                <p><span>Мощность нагрева</span><strong>до +95°С</strong></p>
+                                <p><span>Охлаждение</span><strong>есть</strong></p>
+                                <p><span>Мощность охлаждения</span><strong>до +5°С - +7°С</strong></p>
+                                <p><span>Установка бутылки</span><strong>внизу</strong></p>
+                            </div>
+                            <div class="quantity-and-price">
+                                <div class="quantity">
+                                    <button>&nbsp;</button>
+                                    <span>1</span>
+                                    <button>&nbsp;</button>
+                                </div>
+                                <div class="price">
+                                    <span>Итоговая стоимость:</span>
+                                    <strong>15 000 сум</strong>
+                                </div>
+                            </div>
+                            <a href="#" class="add-to-basket">Добавить в корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list--item">
+                    <div class="content">
+                        <div class="top">
+                            <img src="assets/images/product1.png" alt="">
+                            <h4>Вода в бутилированной бутылке</h4>
+                            <p>18,9 л.</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="quantity-and-price">
+                                <div class="quantity">
+                                    <button>&nbsp;</button>
+                                    <span>1</span>
+                                    <button>&nbsp;</button>
+                                </div>
+                                <div class="price">
+                                    <span>Итоговая стоимость:</span>
+                                    <strong>15 000 сум</strong>
+                                </div>
+                            </div>
+                            <a href="#" class="add-to-basket">Добавить в корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list--item">
+                    <div class="content">
+                        <div class="top">
+                            <img src="assets/images/product2.png" alt="">
+                            <h4>Кулер для воды</h4>
+                            <p>Electronix YLR-FA-1590 Silver</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="info">
+                                <p><span>Нагрев</span><strong>есть</strong></p>
+                                <p><span>Мощность нагрева</span><strong>до +95°С</strong></p>
+                                <p><span>Охлаждение</span><strong>есть</strong></p>
+                                <p><span>Мощность охлаждения</span><strong>до +5°С - +7°С</strong></p>
+                                <p><span>Установка бутылки</span><strong>внизу</strong></p>
+                            </div>
+                            <div class="quantity-and-price">
+                                <div class="quantity">
+                                    <button>&nbsp;</button>
+                                    <span>1</span>
+                                    <button>&nbsp;</button>
+                                </div>
+                                <div class="price">
+                                    <span>Итоговая стоимость:</span>
+                                    <strong>15 000 сум</strong>
+                                </div>
+                            </div>
+                            <a href="#" class="add-to-basket">Добавить в корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list--item">
+                    <div class="content">
+                        <div class="top">
+                            <img src="assets/images/product3.png" alt="">
+                            <h4>Кулер для воды</h4>
+                            <p>ART-1638S</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="info">
+                                <p><span>Нагрев</span><strong>есть</strong></p>
+                                <p><span>Мощность нагрева</span><strong>до +95°С</strong></p>
+                                <p><span>Охлаждение</span><strong>есть</strong></p>
+                                <p><span>Мощность охлаждения</span><strong>до +5°С - +7°С</strong></p>
+                                <p><span>Установка бутылки</span><strong>внизу</strong></p>
+                            </div>
+                            <div class="quantity-and-price">
+                                <div class="quantity">
+                                    <button>&nbsp;</button>
+                                    <span>1</span>
+                                    <button>&nbsp;</button>
+                                </div>
+                                <div class="price">
+                                    <span>Итоговая стоимость:</span>
+                                    <strong>15 000 сум</strong>
+                                </div>
+                            </div>
+                            <a href="#" class="add-to-basket">Добавить в корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product List End-->
+
+        </div>
+    </div>
+</main>
+<!--Main Content End-->
+
+<!--Footer-->
+<footer>
+    <div class="xl:hidden container mx-auto">
+        <a href="#" class="flex items-center justify-center bg-[#1CBBEE] text-white p-1.5 w-full rounded-full mt-10 shadow-[0_20px_20px_rgba(0,0,0,0.2)]">
+            <img src="assets/images/icons/icon-telegram-white.svg" alt="Telegram">
+            <span class="text-center text-xs leading-[22px] font-light ml-4">Заказать через <strong class="block text-sm leading-[18px]font-bold">телеграмм бот</strong></span>
+        </a>
+    </div>
+    <div class="container mx-auto lg:py-8 py-4 overflow-hidden border-t border-[#98A2B3] lg:mt-20 mt-10">
+        <div class="grid lg:grid-cols-11 grid-cols-10 lg:gap-8 gap-4">
+            <div class="col-span-5 grid lg:flex justify-between items-center">
+                <div class="max-lg:hidden">
+                    <img src="assets/images/logo.svg" alt="Veva" class="w-full">
+                </div>
+                <div class="max-lg:order-2">
+                    <p class="font-light lg:text-black text-[#98A2B3] text-xs lg:leading-6 leading-5">VEVA © <br> Все права защищены. 2023</p>
+                </div>
+                <div class="max-lg:order-1">
+                    <ul class="text-black text-xs leading-6">
+                        <li><a href="#" class="font-light">Договор оферты</a></li>
+                        <li><a href="#" class="font-light">Сертификаты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-span-5 lg:col-start-7 flex lg:justify-between lg:items-center items-end max-lg:flex-col-reverse">
+                <div class="flex items-center gap-3">
+                    <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt="Facebook" class="max-lg:w-8"></a>
+                    <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt="Instagram" class="max-lg:w-8"></a>
+                    <a href="#" class="xl:flex hidden items-center  border border-[#1CBBEE] rounded-full py-2 px-5">
+                        <img src="assets/images/icons/icon-telegram.svg" alt="Telegram" class="mr-2.5">
+                        <span class="font-light text-black text-xs leading-[1.1rem] block">
+                            Заказать через <strong class="block font-semibold">телеграмм бот</strong>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <p class="font-light text-black lg:text-lg lg:leading-7 text-xs leading-5 text-right max-lg:mb-1.5">Телефон: <br>
+                        <a href="tel:+998 55 519 90 90" class="font-bold lg:text-2xl lg:leading-10 text-lg">+998 55 519 90 90</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer End-->
+
+<!--Login modal -->
+<div id="login-modal" tabindex="-1" aria-hidden="true" class="modal-block hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-[31rem] max-h-full">
+        <div class="relative bg-transparent">
+            <div class="table max-xl:w-full relative z-10">
+                <ul class="flex flex-wrap text-lg font-bold backdrop-blur-sm bg-black/10 rounded-t-lg text-center"
+                    id="tab"
+                    data-tabs-toggle="#tab-content"
+                    data-tabs-active-classes="text-[#1CBBEE] bg-white rounded-t-lg"
+                    data-tabs-inactive-classes="text-white"
+                    role="tablist">
+                    <li class="max-xl:w-1/2" role="presentation">
+                        <button class="inline-block pt-5 pb-4 px-8 max-xl:w-full"
+                                id="individual-styled-tab"
+                                data-tabs-target="#styled-individual"
+                                type="button"
+                                role="tab"
+                                aria-controls="individual"
+                                aria-selected="false">Физ. лицо</button>
+                    </li>
+                    <li class="max-xl:w-1/2" role="presentation">
+                        <button class="inline-block pt-5 pb-4 px-8 max-xl:w-full"
+                                id="legal-styled-tab"
+                                data-tabs-target="#styled-legal"
+                                type="button"
+                                role="tab"
+                                aria-controls="legal"
+                                aria-selected="false">Юр. лицо</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-content">
+                <div class="hidden relative pt-9 pb-10 px-7 bg-white rounded-b-[1.25rem] xl:rounded-tr-[1.25rem] shadow-2xl"
+                     id="styled-individual"
+                     role="tabpanel"
+                     aria-labelledby="individual-tab">
+                    <button type="button" class="absolute top-2.5 right-2.5" data-modal-hide="login-modal">
+                        <img src="assets/images/icons/modal-close.svg" alt="">
+                    </button>
+
+                    <!-- Вход в личный кабинет -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Вход в личный кабинет</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-7 rounded-[0.625rem]">
+                                <span class="text-black text-lg font-light pl-3.5">+998</span>
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light pl-2.5 p-3.5 border-none w-full" placeholder="00 000-00-00">
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Получить СМС</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Введите код из СМС -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Введите код из СМС</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-7 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="000-000">
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Войти в кабинет</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg">Повторить отправку кода (54 сек)</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Регистрация -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Регистрация</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Ваша фамилия и имя">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <span class="text-black text-lg font-light pl-3.5">+998</span>
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light pl-2.5 p-3.5 border-none w-full" placeholder="00 000-00-00">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-6 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Укажите адрес доставки">
+                            </div>
+                            <div class="custom-form-checkbox !mb-7">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hidden relative pt-9 pb-10 px-7 bg-white rounded-b-[1.25rem] xl:rounded-tr-[1.25rem] shadow-2xl"
+                     id="styled-legal"
+                     role="tabpanel"
+                     aria-labelledby="legal-tab">
+                    <button type="button" class="absolute top-2.5 right-2.5" data-modal-hide="login-modal">
+                        <img src="assets/images/icons/modal-close.svg" alt="">
+                    </button>
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Вход в личный кабинет</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Логин">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-6 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Пароль">
+                            </div>
+                            <div class="custom-form-checkbox !mb-7">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Зарегистрироваться</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg mb-5">Забыли пароль? Восстановить.</button>
+                            </div>
+                            <p class="text-base text-black">Для регистрации обратитесь к менеджеру по телефону: <a href="tel:+998 55 519 90 90" class="font-bold">+998 55 519 90 90</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Login modal END-->
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

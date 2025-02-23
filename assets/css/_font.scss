@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-ExtraBold.eot');
+  src: local('RF Tone ExtraBold'), local('RFTone-ExtraBold'),
+  url('./font/RFTone-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-ExtraBold.woff2') format('woff2'),
+  url('./font/RFTone-ExtraBold.woff') format('woff'),
+  url('./font/RFTone-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-BoldItalic.eot');
+  src: local('RF Tone Bold Italic'), local('RFTone-BoldItalic'),
+  url('./font/RFTone-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-BoldItalic.woff2') format('woff2'),
+  url('./font/RFTone-BoldItalic.woff') format('woff'),
+  url('./font/RFTone-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-UltraLight.eot');
+  src: local('RF Tone UltraLight'), local('RFTone-UltraLight'),
+  url('./font/RFTone-UltraLight.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-UltraLight.woff2') format('woff2'),
+  url('./font/RFTone-UltraLight.woff') format('woff'),
+  url('./font/RFTone-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-Italic.eot');
+  src: local('RF Tone Italic'), local('RFTone-Italic'),
+  url('./font/RFTone-Italic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-Italic.woff2') format('woff2'),
+  url('./font/RFTone-Italic.woff') format('woff'),
+  url('./font/RFTone-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-SemiBoldItalic.eot');
+  src: local('RF Tone SemiBold Italic'), local('RFTone-SemiBoldItalic'),
+  url('./font/RFTone-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-SemiBoldItalic.woff2') format('woff2'),
+  url('./font/RFTone-SemiBoldItalic.woff') format('woff'),
+  url('./font/RFTone-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-ExtraBoldItalic.eot');
+  src: local('RF Tone ExtraBold Italic'), local('RFTone-ExtraBoldItalic'),
+  url('./font/RFTone-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-ExtraBoldItalic.woff2') format('woff2'),
+  url('./font/RFTone-ExtraBoldItalic.woff') format('woff'),
+  url('./font/RFTone-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-Light.eot');
+  src: local('RF Tone Light'), local('RFTone-Light'),
+  url('./font/RFTone-Light.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-Light.woff2') format('woff2'),
+  url('./font/RFTone-Light.woff') format('woff'),
+  url('./font/RFTone-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-ExtraLightItalic.eot');
+  src: local('RF Tone ExtraLight Italic'), local('RFTone-ExtraLightItalic'),
+  url('./font/RFTone-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-ExtraLightItalic.woff2') format('woff2'),
+  url('./font/RFTone-ExtraLightItalic.woff') format('woff'),
+  url('./font/RFTone-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-ExtraLight.eot');
+  src: local('RF Tone ExtraLight'), local('RFTone-ExtraLight'),
+  url('./font/RFTone-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-ExtraLight.woff2') format('woff2'),
+  url('./font/RFTone-ExtraLight.woff') format('woff'),
+  url('./font/RFTone-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-Regular.eot');
+  src: local('RF Tone Regular'), local('RFTone-Regular'),
+  url('./font/RFTone-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-Regular.woff2') format('woff2'),
+  url('./font/RFTone-Regular.woff') format('woff'),
+  url('./font/RFTone-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-Bold.eot');
+  src: local('RF Tone Bold'), local('RFTone-Bold'),
+  url('./font/RFTone-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-Bold.woff2') format('woff2'),
+  url('./font/RFTone-Bold.woff') format('woff'),
+  url('./font/RFTone-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-SemiBold.eot');
+  src: local('RF Tone SemiBold'), local('RFTone-SemiBold'),
+  url('./font/RFTone-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-SemiBold.woff2') format('woff2'),
+  url('./font/RFTone-SemiBold.woff') format('woff'),
+  url('./font/RFTone-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-Black.eot');
+  src: local('RF Tone Black'), local('RFTone-Black'),
+  url('./font/RFTone-Black.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-Black.woff2') format('woff2'),
+  url('./font/RFTone-Black.woff') format('woff'),
+  url('./font/RFTone-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-LightItalic.eot');
+  src: local('RF Tone Light Italic'), local('RFTone-LightItalic'),
+  url('./font/RFTone-LightItalic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-LightItalic.woff2') format('woff2'),
+  url('./font/RFTone-LightItalic.woff') format('woff'),
+  url('./font/RFTone-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-UltraLightItalic.eot');
+  src: local('RF Tone UltraLight Italic'), local('RFTone-UltraLightItalic'),
+  url('./font/RFTone-UltraLightItalic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-UltraLightItalic.woff2') format('woff2'),
+  url('./font/RFTone-UltraLightItalic.woff') format('woff'),
+  url('./font/RFTone-UltraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RF Tone';
+  src: url('./font/RFTone-BlackItalic.eot');
+  src: local('RF Tone Black Italic'), local('RFTone-BlackItalic'),
+  url('./font/RFTone-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  url('./font/RFTone-BlackItalic.woff2') format('woff2'),
+  url('./font/RFTone-BlackItalic.woff') format('woff'),
+  url('./font/RFTone-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}

@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<!--Header-->
+<header class="header-main relative"> <!--Here the absolute class is changed to relative-->
+    <div class="container mx-auto py-7 max-xl:pt-3 max-xl:pb-16 max-xl:relative flex justify-between items-center">
+        <div class="xl:w-36 xl:mr-40 flex items-center">
+            <button id="mobile-menu-bar" class="xl:hidden mr-3">
+                <img src="assets/images/icons/mobile-menu-bar.svg" alt="">
+            </button>
+            <a href="#">
+                <img src="assets/images/logo.svg" alt="Logotype" class="xl:max-w-full max-w-[6.5rem]">
+            </a>
+            <a href="#" class="back-btn">
+                <img src="assets/images/icons/arrow-back-black.svg" alt="">
+                <span>Вернуться</span>
+            </a>
+        </div>
+        <div class="right-block flex items-center justify-between xl:w-[calc(100%-20rem)]">
+            <div class="menu max-xl:hidden">
+                <ul class="flex items-center">
+                    <li class="active"><a href="#">Главная</a></li>
+                    <li><a href="#">Магазин товаров</a></li>
+                </ul>
+            </div>
+            <div class="location xl:relative max-xl:absolute max-xl:left-0 max-lg:left-4 max-xl:bottom-0 max-xl:w-full max-lg:w-[calc(100%-2rem)]">
+                <button id="dropdownLocationButton" data-dropdown-toggle="dropdownLocationContent" type="button" class="header-btn-location">
+                    улица Мукими, 166
+                </button>
+                <div id="dropdownLocationContent" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow min-w-full">
+                    <ul class="py-2 text-sm text-black font-light" aria-labelledby="dropdownLocationButton">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">улица Мукими, 167</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">улица Мукими, 168</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile">
+                <button id="dropdownLanguageButton" data-dropdown-toggle="dropdownLanguageContent" type="button" class="flex items-center text-sm font-light text-black bg-white py-3 px-[1.125rem]">
+                    <span class="mr-2">Ру</span>
+                    <img src="assets/images/icons/arrow-down-lightblue.svg" alt="">
+                </button>
+                <button data-modal-target="login-modal" data-modal-toggle="login-modal" type="button" class="flex items-center text-sm font-light text-black bg-white py-2.5 px-[1.125rem]">
+                    <img src="assets/images/icons/profile-black.svg" alt="" class="xl:mr-2">
+                    <span class="max-xl:hidden">Войти в кабинет</span>
+                </button>
+                <button type="button" class="xl:flex hidden items-center text-sm font-light text-black bg-white p-2.5"><img src="assets/images/icons/logout-gray.svg" alt=""></button>
+            </div>
+            <div id="dropdownLanguageContent" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow">
+                <ul class="py-2 text-sm text-black font-light" aria-labelledby="dropdownLanguageButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">En</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">Uz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Added bottom wave except HOME PAGE-->
+    <div class="relative overflow-hidden max-xl:mt-5">
+        <img src="assets/images/header-bottom-shape.svg" alt="" class="animate-wave">
+    </div>
+</header>
+<!--Header End-->
+
+<!--Mobile Menu-->
+<div id="mobile-menu" class="xl:hidden">
+    <div class="content">
+        <button class="close"><img src="assets/images/icons/mobile-menu-close.svg" alt=""></button>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">Магазин товаров</a></li>
+                <li><a href="#">Договор оферты</a></li>
+                <li><a href="#">Сертификаты</a></li>
+                <li><a href="#" class="text-[#E9573F] font-bold">Выход</a></li>
+            </ul>
+        </nav>
+        <div class="bottom">
+            <p class="phone">
+                <span>Телефон:</span>
+                <a href="tel:+998 55 519 90 90">+998 55 519 90 90</a>
+            </p>
+            <p class="social-links">
+                <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt="Instagram"></a>
+            </p>
+        </div>
+    </div>
+    <div class="relative overflow-hidden">
+        <img src="assets/images/header-bottom-shape.svg" alt="" class="animate-wave">
+    </div>
+</div>
+<!--Mobile Menu End-->
+
+<!--Main Content-->
+<main class="relative">
+    <div class="product-list">
+        <div class="container mx-auto lg:pt-8 pt-5">
+
+            <!--Tab Navs-->
+            <div class="tab-navs">
+                <ul>
+                    <li><a href="#">Ваша корзина <span>3</span></a></li>
+                    <li><a href="#">История заказов <span>1003</span></a></li>
+                    <li class="active"><a href="#">Личная информация</a></li>
+                    <li><a href="#">Оповещения <span>5</span></a></li>
+                </ul>
+                <div class="dropdownMenuList">
+                    <button id="dropdownMenuListButton"
+                            data-dropdown-toggle="dropdownMenuListContent"
+                            type="button"
+                            class="">
+                        Личная информация
+                    </button>
+                    <div id="dropdownMenuListContent" class="z-10 hidden">
+                        <div aria-labelledby="dropdownMenuListButton">
+                            <a href="#">Ваша корзина <span>3</span></a>
+                            <a href="#">История заказов <span>1003</span></a>
+                            <a href="#">Оповещения</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tab Navs End-->
+
+            <div class="xl:grid grid-cols-12 xl:gap-8">
+                <!--Title & Table-->
+                <div class="xl:col-span-7 max-xl:mb-10">
+                    <h2 class="md:text-[2rem] text-2xl md:leading-10 font-bold text-black md:mb-8 mb-6">Личная информация</h2>
+                    <div>
+                        <table class="w-full md:text-lg text-sm max-md:leading-6">
+                            <tbody>
+                            <tr class="py-3 px-5 bg-[#F2F4F7]">
+                                <td class="font-light py-3 px-5">Фамилия и имя:</td>
+                                <td class="font-bold py-3 px-5">Никифоров Михаил</td>
+                            </tr>
+                            <tr class="py-3 px-5">
+                                <td class="font-light py-3 px-5">Номер телефона:</td>
+                                <td class="font-bold py-3 px-5">
+                                    <span class="block">+ 998 90 124-25-25</span>
+                                    <span class="block">+ 998 90 124-25-25</span>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 bg-[#F2F4F7]">
+                                <td class="font-light py-3 px-5">Ваш адрес Nº1:</td>
+                                <td class="font-bold py-3 px-5">г. Ташкент, улица Мукими, 166 ...</td>
+                            </tr>
+                            <tr class="py-3 px-5">
+                                <td class="font-light py-3 px-5">Ваш адрес Nº2:</td>
+                                <td class="font-bold py-3 px-5">г. Ташкент, улица Арнасай, 2 ...</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="md:flex xl:mt-12 mt-6">
+                            <button type="button" class="flex items-center text-black py-3 px-8 text-lg font-bold bg-[#F2F4F7] rounded-full md:mr-7 max-md:mb-4 max-md:w-full max-md:justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                    <path d="M11.5 20.7949H5.5C5.23478 20.7949 4.98043 20.6896 4.79289 20.502C4.60536 20.3145 4.5 20.0601 4.5 19.7949V5.79492C4.5 5.52971 4.60536 5.27535 4.79289 5.08782C4.98043 4.90028 5.23478 4.79492 5.5 4.79492H10.5V7.79492C10.5 8.59057 10.8161 9.35363 11.3787 9.91624C11.9413 10.4789 12.7044 10.7949 13.5 10.7949H16.5V15.7949C16.5 16.0601 16.6054 16.3145 16.7929 16.502C16.9804 16.6896 17.2348 16.7949 17.5 16.7949C17.7652 16.7949 18.0196 16.6896 18.2071 16.502C18.3946 16.3145 18.5 16.0601 18.5 15.7949V9.79492C18.5 9.79492 18.5 9.79492 18.5 9.73492C18.4896 9.64306 18.4695 9.55255 18.44 9.46492V9.37492C18.3919 9.2721 18.3278 9.17759 18.25 9.09492V9.09492L12.25 3.09492C12.1673 3.01714 12.0728 2.953 11.97 2.90492C11.9369 2.89913 11.9031 2.89913 11.87 2.90492C11.7728 2.85292 11.6683 2.81584 11.56 2.79492H5.5C4.70435 2.79492 3.94129 3.11099 3.37868 3.6736C2.81607 4.23621 2.5 4.99927 2.5 5.79492V19.7949C2.5 20.5906 2.81607 21.3536 3.37868 21.9162C3.94129 22.4789 4.70435 22.7949 5.5 22.7949H11.5C11.7652 22.7949 12.0196 22.6896 12.2071 22.502C12.3946 22.3145 12.5 22.0601 12.5 21.7949C12.5 21.5297 12.3946 21.2754 12.2071 21.0878C12.0196 20.9003 11.7652 20.7949 11.5 20.7949ZM12.5 6.20492L15.09 8.79492H13.5C13.2348 8.79492 12.9804 8.68956 12.7929 8.50203C12.6054 8.31449 12.5 8.06014 12.5 7.79492V6.20492ZM7.5 14.7949H13.5C13.7652 14.7949 14.0196 14.6896 14.2071 14.502C14.3946 14.3145 14.5 14.0601 14.5 13.7949C14.5 13.5297 14.3946 13.2754 14.2071 13.0878C14.0196 12.9003 13.7652 12.7949 13.5 12.7949H7.5C7.23478 12.7949 6.98043 12.9003 6.79289 13.0878C6.60536 13.2754 6.5 13.5297 6.5 13.7949C6.5 14.0601 6.60536 14.3145 6.79289 14.502C6.98043 14.6896 7.23478 14.7949 7.5 14.7949ZM11.5 16.7949H7.5C7.23478 16.7949 6.98043 16.9003 6.79289 17.0878C6.60536 17.2754 6.5 17.5297 6.5 17.7949C6.5 18.0601 6.60536 18.3145 6.79289 18.502C6.98043 18.6896 7.23478 18.7949 7.5 18.7949H11.5C11.7652 18.7949 12.0196 18.6896 12.2071 18.502C12.3946 18.3145 12.5 18.0601 12.5 17.7949C12.5 17.5297 12.3946 17.2754 12.2071 17.0878C12.0196 16.9003 11.7652 16.7949 11.5 16.7949ZM7.5 10.7949H8.5C8.76522 10.7949 9.01957 10.6896 9.20711 10.502C9.39464 10.3145 9.5 10.0601 9.5 9.79492C9.5 9.52971 9.39464 9.27535 9.20711 9.08782C9.01957 8.90028 8.76522 8.79492 8.5 8.79492H7.5C7.23478 8.79492 6.98043 8.90028 6.79289 9.08782C6.60536 9.27535 6.5 9.52971 6.5 9.79492C6.5 10.0601 6.60536 10.3145 6.79289 10.502C6.98043 10.6896 7.23478 10.7949 7.5 10.7949ZM21.21 17.0849C21.117 16.9912 21.0064 16.9168 20.8846 16.866C20.7627 16.8153 20.632 16.7891 20.5 16.7891C20.368 16.7891 20.2373 16.8153 20.1154 16.866C19.9936 16.9168 19.883 16.9912 19.79 17.0849L16.5 20.3849L15.21 19.0849C15.1168 18.9917 15.0061 18.9177 14.8842 18.8673C14.7624 18.8168 14.6319 18.7908 14.5 18.7908C14.3681 18.7908 14.2376 18.8168 14.1158 18.8673C13.9939 18.9177 13.8832 18.9917 13.79 19.0849C13.6968 19.1782 13.6228 19.2889 13.5723 19.4107C13.5219 19.5325 13.4959 19.6631 13.4959 19.7949C13.4959 19.9268 13.5219 20.0573 13.5723 20.1792C13.6228 20.301 13.6968 20.4117 13.79 20.5049L15.79 22.5049C15.883 22.5986 15.9936 22.673 16.1154 22.7238C16.2373 22.7746 16.368 22.8007 16.5 22.8007C16.632 22.8007 16.7627 22.7746 16.8846 22.7238C17.0064 22.673 17.117 22.5986 17.21 22.5049L21.21 18.5049C21.3037 18.412 21.3781 18.3014 21.4289 18.1795C21.4797 18.0576 21.5058 17.9269 21.5058 17.7949C21.5058 17.6629 21.4797 17.5322 21.4289 17.4103C21.3781 17.2885 21.3037 17.1779 21.21 17.0849V17.0849Z" fill="black"/>
+                                </svg>
+                                <span class="block ml-[0.625rem]">Скачать договор</span>
+                            </button>
+                            <button type="button" data-modal-target="edite-modal" data-modal-toggle="edite-modal" class="flex items-center text-black py-3 px-8 text-lg font-bold bg-[#F2F4F7] rounded-full max-md:w-full max-md:justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 17.9999H9.24C9.37161 18.0007 9.50207 17.9755 9.62391 17.9257C9.74574 17.8759 9.85656 17.8026 9.95 17.7099L16.87 10.7799L19.71 7.99994C19.8037 7.90698 19.8781 7.79637 19.9289 7.67452C19.9797 7.55266 20.0058 7.42195 20.0058 7.28994C20.0058 7.15793 19.9797 7.02722 19.9289 6.90536C19.8781 6.7835 19.8037 6.6729 19.71 6.57994L15.47 2.28994C15.377 2.19621 15.2664 2.12182 15.1446 2.07105C15.0227 2.02028 14.892 1.99414 14.76 1.99414C14.628 1.99414 14.4973 2.02028 14.3754 2.07105C14.2536 2.12182 14.143 2.19621 14.05 2.28994L11.23 5.11994L4.29 12.0499C4.19732 12.1434 4.12399 12.2542 4.07423 12.376C4.02446 12.4979 3.99924 12.6283 4 12.7599V16.9999C4 17.2652 4.10536 17.5195 4.29289 17.707C4.48043 17.8946 4.73478 17.9999 5 17.9999ZM14.76 4.40994L17.59 7.23994L16.17 8.65994L13.34 5.82994L14.76 4.40994ZM6 13.1699L11.93 7.23994L14.76 10.0699L8.83 15.9999H6V13.1699ZM21 19.9999H3C2.73478 19.9999 2.48043 20.1053 2.29289 20.2928C2.10536 20.4804 2 20.7347 2 20.9999C2 21.2652 2.10536 21.5195 2.29289 21.707C2.48043 21.8946 2.73478 21.9999 3 21.9999H21C21.2652 21.9999 21.5196 21.8946 21.7071 21.707C21.8946 21.5195 22 21.2652 22 20.9999C22 20.7347 21.8946 20.4804 21.7071 20.2928C21.5196 20.1053 21.2652 19.9999 21 19.9999Z" fill="black"/>
+                                </svg>
+                                <span class="block ml-[0.625rem]">Редактировать</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Title & Table End-->
+
+                <!--Sidebar Banner-->
+                <div class="xl:col-span-5">
+                    <div class="sidebar-banner-slide xl:ml-16">
+                        <div class="bg-gradient-to-br from-[#0075CA] to-[#246FA5] rounded-[2.5rem]">
+                            <div class="md:grid grid-cols-2 gap-4">
+                                <div class="flex flex-col justify-between py-7 pl-7 text-white relative z-10 max-md:w-2/3">
+                                    <h3 class="font-light text-2xl mb-16">Круглосуточная доставка1 <strong class="font-bold">24/7</strong></h3>
+                                    <div>
+                                        <a href="#" class="table font-light text-sm leading-6 py-3 px-9 bg-white text-black rounded-full">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-end max-md:w-1/2 max-md:absolute right-0 bottom-0 max-md:opacity-70">
+                                    <img src="assets/images/home-second-slide1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-[#0075CA] to-[#246FA5] rounded-[2.5rem]">
+                            <div class="md:grid grid-cols-2 gap-4">
+                                <div class="flex flex-col justify-between py-7 pl-7 text-white relative z-10 max-md:w-2/3">
+                                    <h3 class="font-light text-2xl mb-16">Круглосуточная доставка2 <strong class="font-bold">24/7</strong></h3>
+                                    <div>
+                                        <a href="#" class="table font-light text-sm leading-6 py-3 px-9 bg-white text-black rounded-full">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-end max-md:w-1/2 max-md:absolute right-0 bottom-0 max-md:opacity-70">
+                                    <img src="assets/images/home-second-slide1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Sidebar Banner End-->
+            </div>
+        </div>
+    </div>
+</main>
+<!--Main Content End-->
+
+<!--Footer-->
+<footer>
+    <div class="xl:hidden container mx-auto">
+        <a href="#" class="flex items-center justify-center bg-[#1CBBEE] text-white p-1.5 w-full rounded-full mt-10 shadow-[0_20px_20px_rgba(0,0,0,0.2)]">
+            <img src="assets/images/icons/icon-telegram-white.svg" alt="Telegram">
+            <span class="text-center text-xs leading-[22px] font-light ml-4">Заказать через <strong class="block text-sm leading-[18px]font-bold">телеграмм бот</strong></span>
+        </a>
+    </div>
+    <div class="container mx-auto lg:py-8 py-4 overflow-hidden border-t border-[#98A2B3] lg:mt-20 mt-10">
+        <div class="grid lg:grid-cols-11 grid-cols-10 lg:gap-8 gap-4">
+            <div class="col-span-5 grid lg:flex justify-between items-center">
+                <div class="max-lg:hidden">
+                    <img src="assets/images/logo.svg" alt="Veva" class="w-full">
+                </div>
+                <div class="max-lg:order-2">
+                    <p class="font-light lg:text-black text-[#98A2B3] text-xs lg:leading-6 leading-5">VEVA © <br> Все права защищены. 2023</p>
+                </div>
+                <div class="max-lg:order-1">
+                    <ul class="text-black text-xs leading-6">
+                        <li><a href="#" class="font-light">Договор оферты</a></li>
+                        <li><a href="#" class="font-light">Сертификаты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-span-5 lg:col-start-7 flex lg:justify-between lg:items-center items-end max-lg:flex-col-reverse">
+                <div class="flex items-center gap-3">
+                    <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt="Facebook" class="max-lg:w-8"></a>
+                    <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt="Instagram" class="max-lg:w-8"></a>
+                    <a href="#" class="xl:flex hidden items-center  border border-[#1CBBEE] rounded-full py-2 px-5">
+                        <img src="assets/images/icons/icon-telegram.svg" alt="Telegram" class="mr-2.5">
+                        <span class="font-light text-black text-xs leading-[1.1rem] block">
+                            Заказать через <strong class="block font-semibold">телеграмм бот</strong>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <p class="font-light text-black lg:text-lg lg:leading-7 text-xs leading-5 text-right max-lg:mb-1.5">Телефон: <br>
+                        <a href="tel:+998 55 519 90 90" class="font-bold lg:text-2xl lg:leading-10 text-lg">+998 55 519 90 90</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer End-->
+
+<!--Login modal -->
+<div id="login-modal" tabindex="-1" aria-hidden="true" class="modal-block hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-[31rem] max-h-full">
+        <div class="relative bg-transparent">
+            <div class="table max-xl:w-full relative z-10">
+                <ul class="flex flex-wrap text-lg font-bold backdrop-blur-sm bg-black/10 rounded-t-lg text-center"
+                    id="tab"
+                    data-tabs-toggle="#tab-content"
+                    data-tabs-active-classes="text-[#1CBBEE] bg-white rounded-t-lg"
+                    data-tabs-inactive-classes="text-white"
+                    role="tablist">
+                    <li class="max-xl:w-1/2" role="presentation">
+                        <button class="inline-block pt-5 pb-4 px-8 max-xl:w-full"
+                                id="individual-styled-tab"
+                                data-tabs-target="#styled-individual"
+                                type="button"
+                                role="tab"
+                                aria-controls="individual"
+                                aria-selected="false">Физ. лицо</button>
+                    </li>
+                    <li class="max-xl:w-1/2" role="presentation">
+                        <button class="inline-block pt-5 pb-4 px-8 max-xl:w-full"
+                                id="legal-styled-tab"
+                                data-tabs-target="#styled-legal"
+                                type="button"
+                                role="tab"
+                                aria-controls="legal"
+                                aria-selected="false">Юр. лицо</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-content">
+                <div class="hidden relative pt-9 pb-10 px-7 bg-white rounded-b-[1.25rem] xl:rounded-tr-[1.25rem] shadow-2xl"
+                     id="styled-individual"
+                     role="tabpanel"
+                     aria-labelledby="individual-tab">
+                    <button type="button" class="absolute top-2.5 right-2.5" data-modal-hide="login-modal">
+                        <img src="assets/images/icons/modal-close.svg" alt="">
+                    </button>
+
+                    <!-- Вход в личный кабинет -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Вход в личный кабинет</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-7 rounded-[0.625rem]">
+                                <span class="text-black text-lg font-light pl-3.5">+998</span>
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light pl-2.5 p-3.5 border-none w-full" placeholder="00 000-00-00">
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Получить СМС</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Введите код из СМС -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Введите код из СМС</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-7 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="000-000">
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Войти в кабинет</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg">Повторить отправку кода (54 сек)</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Регистрация -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Регистрация</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Ваша фамилия и имя">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <span class="text-black text-lg font-light pl-3.5">+998</span>
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light pl-2.5 p-3.5 border-none w-full" placeholder="00 000-00-00">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-6 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Укажите адрес доставки">
+                            </div>
+                            <div class="custom-form-checkbox !mb-7">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hidden relative pt-9 pb-10 px-7 bg-white rounded-b-[1.25rem] xl:rounded-tr-[1.25rem] shadow-2xl"
+                     id="styled-legal"
+                     role="tabpanel"
+                     aria-labelledby="legal-tab">
+                    <button type="button" class="absolute top-2.5 right-2.5" data-modal-hide="login-modal">
+                        <img src="assets/images/icons/modal-close.svg" alt="">
+                    </button>
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Вход в личный кабинет</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Логин">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-6 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Пароль">
+                            </div>
+                            <div class="custom-form-checkbox !mb-7">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Зарегистрироваться</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg mb-5">Забыли пароль? Восстановить.</button>
+                            </div>
+                            <p class="text-base text-black">Для регистрации обратитесь к менеджеру по телефону: <a href="tel:+998 55 519 90 90" class="font-bold">+998 55 519 90 90</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Login modal END-->
+
+<!--Edite Profile Modal-->
+<div id="edite-modal" tabindex="-1" aria-hidden="true" class="modal-block hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-[32rem] max-h-full">
+        <div class="relative bg-transparent">
+            <div class="bg-white rounded-[1.25rem] shadow-2xl py-9 px-7">
+                <button type="button" class="absolute top-2.5 right-2.5" data-modal-hide="edite-modal">
+                    <img src="assets/images/icons/modal-close.svg" alt="">
+                </button>
+                <div>
+                    <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Редактировать</h3>
+                    <form action="">
+                        <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                            <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" value="Никифоров Михаил">
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="bg-[#F2F4F7] flex items-center rounded-[0.625rem] w-full">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" value="+ 998 90 124-25-25">
+                            </div>
+                            <button type="button" class="ml-4"><img src="assets/images/icons/input-add.svg" alt=""></button>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="bg-[#F2F4F7] flex items-center rounded-[0.625rem] w-full">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" value="+ 998 90 124-25-25">
+                            </div>
+                            <button type="button" class="ml-4"><img src="assets/images/icons/input-delete.svg" alt=""></button>
+                        </div>
+                        <h4 class="text-black text-lg mb-4">Ваш адрес №1:</h4>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="bg-[#F2F4F7] flex items-center rounded-[0.625rem] w-full">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" value="г. Ташкент, улица Мукими, 166 ...">
+                            </div>
+                            <button type="button" class="ml-4"><img src="assets/images/icons/input-delete.svg" alt=""></button>
+                        </div>
+                        <h4 class="text-black text-lg mb-4">Ваш адрес №2:</h4>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="bg-[#F2F4F7] flex items-center rounded-[0.625rem] w-full">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" value="г. Ташкент, улица Арнасай, 2">
+                            </div>
+                            <button type="button" class="ml-4"><img src="assets/images/icons/input-delete.svg" alt=""></button>
+                            <button type="button" class="ml-2.5"><img src="assets/images/icons/input-add.svg" alt=""></button>
+                        </div>
+                        <hr class="mb-4">
+                        <div>
+                            <div class="custom-form-input mb-4">
+                                <select class="!text-lg">
+                                    <option value="" disabled selected hidden>Район</option>
+                                    <option value="">Чиланзарский район</option>
+                                    <option value="">Юнусабадский район</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3.5 mb-4">
+                                <div class="custom-form-input">
+                                    <input type="text" class="w-auto !text-lg placeholder:text-black" placeholder="Дом">
+                                </div>
+                                <div class="custom-form-input">
+                                    <input type="text" class="w-auto !text-lg placeholder:text-black" placeholder="Подъезд">
+                                </div>
+                                <div class="custom-form-input">
+                                    <input type="text" class="w-auto !text-lg placeholder:text-black" placeholder="Этаж">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3.5 mb-6">
+                                <div class="custom-form-input">
+                                    <input type="text" class="w-auto !text-lg placeholder:text-black" placeholder="Номер квартиры">
+                                </div>
+                                <div class="custom-form-input">
+                                    <input type="text" class="w-auto !text-lg placeholder:text-black" placeholder="Код домофона">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-form-checkbox !mb-7">
+                            <label>
+                                <input type="checkbox">
+                                <span>Я согласен на обработку персональных данных</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold">Сохранить</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Edite Profile Modal-->
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

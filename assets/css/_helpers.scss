@@ -1,0 +1,241 @@
+input:focus,textarea:focus, select:focus,
+input:hover,textarea:hover, select:hover,
+input:focus-visible,textarea:focus-visible, select:focus-visible,
+input:active,textarea:active, select:active{
+  outline:0 !important;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+///// ANIMATIONS = WAVE, ROTATE
+@keyframes slide-infinite {
+  0% {
+    left: -99%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: -99%;
+  }
+}
+.animate-wave{
+  width: 200%;
+  max-width: none;
+  position: relative;
+  animation: slide-infinite 50s ease 0s infinite normal forwards;
+}
+@keyframes rotate-top {
+  0% {
+    transform: rotate(0);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    transform-origin: top;
+  }
+}
+@keyframes rotate-bottom {
+  0% {
+    transform: rotate(0);
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    transform-origin: bottom;
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-rotate-top-infinite {
+  animation: rotate-top 20s ease 0s infinite normal forwards;
+}
+.animate-rotate-bottom-infinite {
+  animation: rotate-bottom 20s ease 0s infinite normal forwards;
+}
+.animate-rotate-center-infinite {
+  animation: rotate-center 20s ease 0s infinite normal forwards;
+}
+///////////
+
+///// BANNER SLIDER
+.slick-dots{
+  display: table;
+  margin: 1.25rem auto 0 auto;
+  li{
+    display: inline-block;
+    margin-left: 7px;
+    margin-right: 7px;
+    button{
+      line-height: 0;
+      overflow: hidden;
+      width: 14px;
+      height: 14px;
+      text-indent: -9999px;
+      background-color: #F2F4F7;
+      border-radius: 50%;
+      transition: .2s all;
+    }
+    &.slick-active{
+      button {
+        background-color: #1CBBEE;
+      }
+    }
+  }
+}
+///////////
+
+///// DATEPICKER
+.datepicker-picker{
+  .datepicker-controls{
+    opacity: 0.7;
+  }
+  .datepicker-cell{
+    font-weight: 300;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &.selected{
+      background-color: #1CBBEE!important;
+    }
+  }
+}
+///////////
+
+///// CUSTOM INPUT, SELECT
+.custom-form-checkbox{
+  display: table;
+  user-select: none;
+  margin-bottom: .5rem;
+  input{
+    display: none;
+    &:checked + span:after{
+      background: #1CBBEE url('../images/icons/checked.svg') no-repeat center center;
+      background-size: 1rem;
+    }
+    &.text-secondary {
+      &:checked + span:after{
+        background-color: black;
+      }
+      &+span:after{
+        border-color: black;
+      }
+    }
+  }
+  span{
+    display: table;
+    position: relative;
+    padding-left: 2.125rem;
+    color:  black;
+    font-size: .875rem;
+    font-weight: 300;
+    &:after{
+      cursor: pointer;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: .25rem;
+      background: #E4EAF3;
+      transition: background-color .2s;
+    }
+  }
+}
+.custom-form-input {
+  position: relative;
+  display: block;
+
+  span {
+    color: #98A2B3;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    display: table;
+    position: relative;
+    margin-bottom: 5px;
+
+    &:has(+ input[required]), &:has(+ select[required]) {
+      &:after {
+        content: "*";
+        position: absolute;
+        top: -0.25rem;
+        right: -0.5rem;
+        color: #FF0C0C;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  input, select {
+    width: 100%;
+    border-radius: .625rem;
+    padding: .875rem 2rem .875rem .9375rem;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: black;
+    background-color: #F2F4F7;
+    border: 0;
+    &:focus, &:active {
+      outline: none!important;
+      box-shadow: none!important;
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #F2F4F7 url("../images/icons/arrow-down-lightblue.svg") no-repeat calc(100% - 1rem) center;
+    background-size: .75rem;
+    padding-right: 2.5rem;
+    &:invalid {
+      color: #f00;
+    }
+  }
+}
+///////////
+
+///// CUSTOM SCROLL BAR
+.custom-overflow-auto-design::-webkit-scrollbar {
+  width: 10px;
+}
+.custom-overflow-auto-design::-webkit-scrollbar-track {
+  background: #E4EAF3;
+}
+.custom-overflow-auto-design::-webkit-scrollbar-thumb {
+  background: #1CBBEE;
+  border-radius: 5px;
+}
+.custom-overflow-auto-design::-webkit-scrollbar-thumb:hover {
+  background: #246FA5;
+}
+///////////
+
+///// MODAL BLOCK ANIMATE
+.modal-block{
+  >div{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all .3s;
+  }
+  &.modal-showed{
+    >div{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+///////////

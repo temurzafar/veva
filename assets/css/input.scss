@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import "slick-carousel/slick/slick.css";
+@import "flowbite/dist/flowbite.css";
+@import 'font';
+@import 'components';
+@import 'helpers';
+@import 'responsive';
+
+
+body{
+  font-family: "RF Tone", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}

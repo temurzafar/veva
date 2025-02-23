@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<!--Header-->
+<header class="header-main relative"> <!--Here the absolute class is changed to relative-->
+    <div class="container mx-auto py-7 max-xl:pt-3 max-xl:pb-16 max-xl:relative flex justify-between items-center">
+        <div class="xl:w-36 xl:mr-40 flex items-center">
+            <button id="mobile-menu-bar" class="xl:hidden mr-3">
+                <img src="assets/images/icons/mobile-menu-bar.svg" alt="">
+            </button>
+            <a href="#">
+                <img src="assets/images/logo.svg" alt="Logotype" class="xl:max-w-full max-w-[6.5rem]">
+            </a>
+            <a href="#" class="back-btn">
+                <img src="assets/images/icons/arrow-back-black.svg" alt="">
+                <span>Вернуться</span>
+            </a>
+        </div>
+        <div class="right-block flex items-center justify-between xl:w-[calc(100%-20rem)]">
+            <div class="menu max-xl:hidden">
+                <ul class="flex items-center">
+                    <li class="active"><a href="#">Главная</a></li>
+                    <li><a href="#">Магазин товаров</a></li>
+                </ul>
+            </div>
+            <div class="location xl:relative max-xl:absolute max-xl:left-0 max-lg:left-4 max-xl:bottom-0 max-xl:w-full max-lg:w-[calc(100%-2rem)]">
+                <button id="dropdownLocationButton" data-dropdown-toggle="dropdownLocationContent" type="button" class="header-btn-location">
+                    улица Мукими, 166
+                </button>
+                <div id="dropdownLocationContent" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow min-w-full">
+                    <ul class="py-2 text-sm text-black font-light" aria-labelledby="dropdownLocationButton">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">улица Мукими, 167</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">улица Мукими, 168</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile">
+                <button id="dropdownLanguageButton" data-dropdown-toggle="dropdownLanguageContent" type="button" class="flex items-center text-sm font-light text-black bg-white py-3 px-[1.125rem]">
+                    <span class="mr-2">Ру</span>
+                    <img src="assets/images/icons/arrow-down-lightblue.svg" alt="">
+                </button>
+                <button data-modal-target="login-modal" data-modal-toggle="login-modal" type="button" class="flex items-center text-sm font-light text-black bg-white py-2.5 px-[1.125rem]">
+                    <img src="assets/images/icons/profile-black.svg" alt="" class="xl:mr-2">
+                    <span class="max-xl:hidden">Войти в кабинет</span>
+                </button>
+                <button type="button" class="xl:flex hidden items-center text-sm font-light text-black bg-white p-2.5"><img src="assets/images/icons/logout-gray.svg" alt=""></button>
+            </div>
+            <div id="dropdownLanguageContent" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow">
+                <ul class="py-2 text-sm text-black font-light" aria-labelledby="dropdownLanguageButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">En</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200">Uz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Added bottom wave except HOME PAGE-->
+    <div class="relative overflow-hidden max-xl:mt-5">
+        <img src="assets/images/header-bottom-shape.svg" alt="" class="animate-wave">
+    </div>
+</header>
+<!--Header End-->
+
+<!--Mobile Menu-->
+<div id="mobile-menu" class="xl:hidden">
+    <div class="content">
+        <button class="close"><img src="assets/images/icons/mobile-menu-close.svg" alt=""></button>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">Магазин товаров</a></li>
+                <li><a href="#">Договор оферты</a></li>
+                <li><a href="#">Сертификаты</a></li>
+                <li><a href="#" class="text-[#E9573F] font-bold">Выход</a></li>
+            </ul>
+        </nav>
+        <div class="bottom">
+            <p class="phone">
+                <span>Телефон:</span>
+                <a href="tel:+998 55 519 90 90">+998 55 519 90 90</a>
+            </p>
+            <p class="social-links">
+                <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt="Instagram"></a>
+            </p>
+        </div>
+    </div>
+    <div class="relative overflow-hidden">
+        <img src="assets/images/header-bottom-shape.svg" alt="" class="animate-wave">
+    </div>
+</div>
+<!--Mobile Menu End-->
+
+<!--Main Content-->
+<main class="relative">
+    <div class="product-list">
+        <div class="container mx-auto lg:pt-8 mt-5">
+
+            <!--Tab Navs-->
+            <div class="tab-navs">
+                <ul>
+                    <li><a href="#">Ваша корзина <span>3</span></a></li>
+                    <li class="active"><a href="#">История заказов <span>1003</span></a></li>
+                    <li><a href="#">Личная информация</a></li>
+                    <li><a href="#">Оповещения <span>5</span></a></li>
+                </ul>
+                <div class="dropdownMenuList">
+                    <button id="dropdownMenuListButton"
+                            data-dropdown-toggle="dropdownMenuListContent"
+                            type="button"
+                            class="">
+                        История заказов <span>1003</span>
+                    </button>
+                    <div id="dropdownMenuListContent" class="z-10 hidden">
+                        <div aria-labelledby="dropdownMenuListButton">
+                            <a href="#">Ваша корзина <span>3</span></a>
+                            <a href="#">Личная информация</a>
+                            <a href="#">Оповещения <span>5</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tab Navs End-->
+
+            <div>
+                <!--Title & Search Form-->
+                <div class="md:flex items-end justify-between md:mb-8 mb-6">
+                    <h2 class="md:text-[2rem] text-2xl md:leading-10 font-bold text-black">История заказов</h2>
+                    <form action="" class="max-md:w-full max-md:mt-6">
+                        <div class="relative">
+                            <button class="absolute left-2.5 top-1/2 -translate-y-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M19.7551 18.5796L14.9469 13.7714C16.1388 12.3184 16.8571 10.4571 16.8571 8.42857C16.8571 3.77551 13.0816 0 8.42857 0C3.77143 0 0 3.77551 0 8.42857C0 13.0816 3.77143 16.8571 8.42857 16.8571C10.4571 16.8571 12.3143 16.1429 13.7673 14.951L18.5755 19.7551C18.902 20.0816 19.4286 20.0816 19.7551 19.7551C20.0816 19.4327 20.0816 18.902 19.7551 18.5796ZM8.42857 15.1796C4.70204 15.1796 1.67347 12.151 1.67347 8.42857C1.67347 4.70612 4.70204 1.67347 8.42857 1.67347C12.151 1.67347 15.1837 4.70612 15.1837 8.42857C15.1837 12.151 12.151 15.1796 8.42857 15.1796Z" fill="#1CBBEE"/>
+                                </svg>
+                            </button>
+                            <input type="text" placeholder="Найти" class="max-md:w-full placeholder:text-black border-none text-sm font-light py-2.5 px-10 bg-[#F2F4F7] rounded-[0.625rem] lg:min-w-80 focus:outline-none focus:ring-0">
+                        </div>
+                    </form>
+                </div>
+                <!--Title & Search Form End-->
+
+                <!--Table History-->
+                <div class="table-list max-xl:hidden">
+                    <div class="overflow-x-auto">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Дата заказа</th>
+                                <th>Дата доставки</th>
+                                <th>Статус доставки</th>
+                                <th>Вид товара</th>
+                                <th>Кол-во</th>
+                                <th>Стоимость 1 единицы</th>
+                                <th>Сумма к оплате</th>
+                                <th>Действие</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>18.07.2023</td>
+                                <td>19.07.2023</td>
+                                <td class="status">
+                                    <span class="blue">В процессе</span>
+                                </td>
+                                <td>Вода в бутилированной бутылке</td>
+                                <td>3</td>
+                                <td>15 000 сум</td>
+                                <td>45 000 сум</td>
+                                <td>
+                                    <a href="#" class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M11.1749 10.0005L14.7583 6.42548C14.9152 6.26856 15.0034 6.05573 15.0034 5.83381C15.0034 5.6119 14.9152 5.39907 14.7583 5.24215C14.6014 5.08523 14.3885 4.99707 14.1666 4.99707C13.9447 4.99707 13.7319 5.08523 13.5749 5.24215L9.99995 8.82548L6.42495 5.24215C6.26803 5.08523 6.0552 4.99707 5.83328 4.99707C5.61136 4.99707 5.39854 5.08523 5.24162 5.24215C5.0847 5.39907 4.99654 5.6119 4.99654 5.83381C4.99654 6.05573 5.0847 6.26856 5.24162 6.42548L8.82495 10.0005L5.24162 13.5755C5.16351 13.653 5.10151 13.7451 5.05921 13.8467C5.0169 13.9482 4.99512 14.0571 4.99512 14.1671C4.99512 14.2772 5.0169 14.3861 5.05921 14.4876C5.10151 14.5892 5.16351 14.6813 5.24162 14.7588C5.31908 14.8369 5.41125 14.8989 5.5128 14.9412C5.61435 14.9835 5.72327 15.0053 5.83328 15.0053C5.94329 15.0053 6.05221 14.9835 6.15376 14.9412C6.25531 14.8989 6.34748 14.8369 6.42495 14.7588L9.99995 11.1755L13.5749 14.7588C13.6524 14.8369 13.7446 14.8989 13.8461 14.9412C13.9477 14.9835 14.0566 15.0053 14.1666 15.0053C14.2766 15.0053 14.3855 14.9835 14.4871 14.9412C14.5886 14.8989 14.6808 14.8369 14.7583 14.7588C14.8364 14.6813 14.8984 14.5892 14.9407 14.4876C14.983 14.3861 15.0048 14.2772 15.0048 14.1671C15.0048 14.0571 14.983 13.9482 14.9407 13.8467C14.8984 13.7451 14.8364 13.653 14.7583 13.5755L11.1749 10.0005Z" fill="#98A2B3"/>
+                                        </svg>
+                                        <span>Отменить заказ</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>18.07.2023</td>
+                                <td>19.07.2023</td>
+                                <td class="status">
+                                    <span class="red">Не доставлено</span>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M15.0282 6.99951H5.02819C4.76297 6.99951 4.50862 7.10487 4.32108 7.29241C4.13354 7.47994 4.02819 7.7343 4.02819 7.99951C4.02819 8.26473 4.13354 8.51908 4.32108 8.70662C4.50862 8.89415 4.76297 8.99951 5.02819 8.99951H15.0282C15.2934 8.99951 15.5478 8.89415 15.7353 8.70662C15.9228 8.51908 16.0282 8.26473 16.0282 7.99951C16.0282 7.7343 15.9228 7.47994 15.7353 7.29241C15.5478 7.10487 15.2934 6.99951 15.0282 6.99951ZM11.0282 10.9995H5.02819C4.76297 10.9995 4.50862 11.1049 4.32108 11.2924C4.13354 11.4799 4.02819 11.7343 4.02819 11.9995C4.02819 12.2647 4.13354 12.5191 4.32108 12.7066C4.50862 12.8942 4.76297 12.9995 5.02819 12.9995H11.0282C11.2934 12.9995 11.5478 12.8942 11.7353 12.7066C11.9228 12.5191 12.0282 12.2647 12.0282 11.9995C12.0282 11.7343 11.9228 11.4799 11.7353 11.2924C11.5478 11.1049 11.2934 10.9995 11.0282 10.9995ZM10.0282 -0.000488281C8.71497 -0.000488281 7.41461 0.258169 6.20135 0.760716C4.9881 1.26326 3.8857 1.99986 2.95712 2.92844C1.08175 4.80381 0.0281864 7.34735 0.0281864 9.99951C0.0194442 12.3086 0.818979 14.548 2.28819 16.3295L0.288186 18.3295C0.149429 18.4701 0.0554325 18.6487 0.0180584 18.8427C-0.0193158 19.0367 0.0016069 19.2374 0.0781863 19.4195C0.161244 19.5994 0.29589 19.7506 0.465033 19.8539C0.634176 19.9572 0.830187 20.0078 1.02819 19.9995H10.0282C12.6804 19.9995 15.2239 18.9459 17.0993 17.0706C18.9746 15.1952 20.0282 12.6517 20.0282 9.99951C20.0282 7.34735 18.9746 4.80381 17.0993 2.92844C15.2239 1.05308 12.6804 -0.000488281 10.0282 -0.000488281ZM10.0282 17.9995H3.43819L4.36819 17.0695C4.55444 16.8821 4.65898 16.6287 4.65898 16.3645C4.65898 16.1003 4.55444 15.8469 4.36819 15.6595C3.05877 14.3516 2.24336 12.63 2.06088 10.7883C1.87839 8.94656 2.34013 7.09852 3.36741 5.55903C4.3947 4.01955 5.92398 2.88387 7.6947 2.34548C9.46543 1.8071 11.368 1.89932 13.0784 2.60643C14.7888 3.31353 16.201 4.59179 17.0746 6.2234C17.9482 7.85502 18.2291 9.73905 17.8693 11.5545C17.5096 13.37 16.5315 15.0046 15.1017 16.1798C13.672 17.3549 11.8789 17.9981 10.0282 17.9995Z" fill="#98A2B3"/>
+                                        </svg>
+                                    </a>
+                                </td>
+                                <td>Вода в бутилированной бутылке</td>
+                                <td>3</td>
+                                <td>15 000 сум</td>
+                                <td>45 000 сум</td>
+                                <td>
+                                    <a href="#" class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M12.0175 5.97212H6.76747L8.95747 3.78212C9.02776 3.7124 9.08356 3.62944 9.12164 3.53805C9.15971 3.44666 9.17931 3.34863 9.17931 3.24962C9.17931 3.15061 9.15971 3.05258 9.12164 2.96119C9.08356 2.86979 9.02776 2.78684 8.95747 2.71712C8.81694 2.57743 8.62686 2.49902 8.42872 2.49902C8.23058 2.49902 8.04049 2.57743 7.89997 2.71712L4.45747 6.18962C4.38649 6.26027 4.33039 6.34443 4.29247 6.43712C4.21745 6.61971 4.21745 6.82452 4.29247 7.00712C4.33323 7.09827 4.38901 7.18193 4.45747 7.25462L7.92997 10.7496C8.06844 10.8909 8.25714 10.9718 8.45497 10.9746C8.60393 10.9755 8.74979 10.932 8.87393 10.8496C8.99807 10.7673 9.09487 10.6498 9.15199 10.5122C9.20912 10.3746 9.22398 10.2232 9.19468 10.0771C9.16537 9.93105 9.09324 9.79702 8.98747 9.69212L6.79747 7.47212H12.0475C12.6442 7.47212 13.2165 7.70917 13.6385 8.13113C14.0604 8.55308 14.2975 9.12538 14.2975 9.72212V16.7496C14.2975 16.9485 14.3765 17.1393 14.5171 17.2799C14.6578 17.4206 14.8486 17.4996 15.0475 17.4996C15.2464 17.4996 15.4371 17.4206 15.5778 17.2799C15.7184 17.1393 15.7975 16.9485 15.7975 16.7496V9.72212C15.7975 9.22713 15.6995 8.73703 15.5092 8.28009C15.3188 7.82315 15.0399 7.40842 14.6885 7.0598C14.3371 6.71119 13.9202 6.43559 13.4617 6.24891C13.0033 6.06223 12.5124 5.96816 12.0175 5.97212V5.97212Z" fill="#98A2B3"/>
+                                        </svg>
+                                        <span>Повторить заказ</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>18.07.2023</td>
+                                <td>19.07.2023</td>
+                                <td class="status">
+                                    <span class="green">Не доставлено</span>
+                                </td>
+                                <td>Вода в бутилированной бутылке</td>
+                                <td>3</td>
+                                <td>15 000 сум</td>
+                                <td>45 000 сум</td>
+                                <td>
+                                    <a href="#" class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M12.0175 5.97212H6.76747L8.95747 3.78212C9.02776 3.7124 9.08356 3.62944 9.12164 3.53805C9.15971 3.44666 9.17931 3.34863 9.17931 3.24962C9.17931 3.15061 9.15971 3.05258 9.12164 2.96119C9.08356 2.86979 9.02776 2.78684 8.95747 2.71712C8.81694 2.57743 8.62686 2.49902 8.42872 2.49902C8.23058 2.49902 8.04049 2.57743 7.89997 2.71712L4.45747 6.18962C4.38649 6.26027 4.33039 6.34443 4.29247 6.43712C4.21745 6.61971 4.21745 6.82452 4.29247 7.00712C4.33323 7.09827 4.38901 7.18193 4.45747 7.25462L7.92997 10.7496C8.06844 10.8909 8.25714 10.9718 8.45497 10.9746C8.60393 10.9755 8.74979 10.932 8.87393 10.8496C8.99807 10.7673 9.09487 10.6498 9.15199 10.5122C9.20912 10.3746 9.22398 10.2232 9.19468 10.0771C9.16537 9.93105 9.09324 9.79702 8.98747 9.69212L6.79747 7.47212H12.0475C12.6442 7.47212 13.2165 7.70917 13.6385 8.13113C14.0604 8.55308 14.2975 9.12538 14.2975 9.72212V16.7496C14.2975 16.9485 14.3765 17.1393 14.5171 17.2799C14.6578 17.4206 14.8486 17.4996 15.0475 17.4996C15.2464 17.4996 15.4371 17.4206 15.5778 17.2799C15.7184 17.1393 15.7975 16.9485 15.7975 16.7496V9.72212C15.7975 9.22713 15.6995 8.73703 15.5092 8.28009C15.3188 7.82315 15.0399 7.40842 14.6885 7.0598C14.3371 6.71119 13.9202 6.43559 13.4617 6.24891C13.0033 6.06223 12.5124 5.96816 12.0175 5.97212V5.97212Z" fill="#98A2B3"/>
+                                        </svg>
+                                        <span>Повторить заказ</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination">
+                        <li class="prev disabled">
+                            <a href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15.535 3.51465L7.05005 11.9996L15.535 20.4847L16.95 19.0707L9.87805 11.9996L16.95 4.92865L15.535 3.51465Z" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li>...</li>
+                        <li><a href="#">32</a></li>
+                        <li class="next">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8.46495 20.4854L16.95 12.0004L8.46495 3.51535L7.04995 4.92935L14.122 12.0004L7.04995 19.0714L8.46495 20.4854Z" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Table History End-->
+
+                <!--Mobile Articles History-->
+                <div class="xl:hidden">
+                    <div class="border border-[#F2F4F7] rounded-[10px] overflow-hidden mb-4 text-sm leading-6 text-black">
+                        <div class="bg-[#F2F4F7] pt-5 pb-2.5 px-5">
+                            <div class="flex mb-2.5">
+                                <p>
+                                    <strong class="block">Дата заказа:</strong>
+                                    <span class="block font-light">18.07.2023</span>
+                                </p>
+                                <p class="ml-7">
+                                    <strong class="block">Дата доставки:</strong>
+                                    <span class="block font-light">18.07.2023</span>
+                                </p>
+                            </div>
+                            <span class="table bg-[#1CBBEE] px-2.5 rounded-md font-light">В процессе</span>
+                        </div>
+                        <div class="bg-white py-4 px-5">
+                            <p class="mb-2.5">
+                                <strong class="block">Вид товара:</strong>
+                                <span class="block font-light">Вода в бутилированной бутылке</span>
+                            </p>
+                            <div class="flex mb-2.5">
+                                <p>
+                                    <strong class="block">Кол-во:</strong>
+                                    <span class="block font-light">3</span>
+                                </p>
+                                <p class="ml-7">
+                                    <strong class="block">Стоимость 1 единицы:</strong>
+                                    <span class="block font-light">15 000 сум</span>
+                                </p>
+                            </div>
+                            <p class="">
+                                <strong class="block">Сумма к оплате:</strong>
+                                <span class="block font-bold text-[#1CBBEE]">45 000 сум</span>
+                            </p>
+                            <div>
+                                <hr class="border-dashed border-[#98A2B3] my-2.5">
+                                <a href="#" class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M11.1749 10.0005L14.7583 6.42548C14.9152 6.26856 15.0034 6.05573 15.0034 5.83381C15.0034 5.6119 14.9152 5.39907 14.7583 5.24215C14.6014 5.08523 14.3885 4.99707 14.1666 4.99707C13.9447 4.99707 13.7319 5.08523 13.5749 5.24215L9.99995 8.82548L6.42495 5.24215C6.26803 5.08523 6.0552 4.99707 5.83328 4.99707C5.61136 4.99707 5.39854 5.08523 5.24162 5.24215C5.0847 5.39907 4.99654 5.6119 4.99654 5.83381C4.99654 6.05573 5.0847 6.26856 5.24162 6.42548L8.82495 10.0005L5.24162 13.5755C5.16351 13.653 5.10151 13.7451 5.05921 13.8467C5.0169 13.9482 4.99512 14.0571 4.99512 14.1671C4.99512 14.2772 5.0169 14.3861 5.05921 14.4876C5.10151 14.5892 5.16351 14.6813 5.24162 14.7588C5.31908 14.8369 5.41125 14.8989 5.5128 14.9412C5.61435 14.9835 5.72327 15.0053 5.83328 15.0053C5.94329 15.0053 6.05221 14.9835 6.15376 14.9412C6.25531 14.8989 6.34748 14.8369 6.42495 14.7588L9.99995 11.1755L13.5749 14.7588C13.6524 14.8369 13.7446 14.8989 13.8461 14.9412C13.9477 14.9835 14.0566 15.0053 14.1666 15.0053C14.2766 15.0053 14.3855 14.9835 14.4871 14.9412C14.5886 14.8989 14.6808 14.8369 14.7583 14.7588C14.8364 14.6813 14.8984 14.5892 14.9407 14.4876C14.983 14.3861 15.0048 14.2772 15.0048 14.1671C15.0048 14.0571 14.983 13.9482 14.9407 13.8467C14.8984 13.7451 14.8364 13.653 14.7583 13.5755L11.1749 10.0005Z" fill="#98A2B3"/>
+                                    </svg>
+                                    <span class="inline-block text-[#98A2B3] ml-2.5">Отменить заказ</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-[#F2F4F7] rounded-[10px] overflow-hidden mb-4 text-sm leading-6 text-black">
+                        <div class="bg-[#F2F4F7] pt-5 pb-2.5 px-5">
+                            <div class="flex mb-2.5">
+                                <p>
+                                    <strong class="block">Дата заказа:</strong>
+                                    <span class="block font-light">18.07.2023</span>
+                                </p>
+                                <p class="ml-7">
+                                    <strong class="block">Дата доставки:</strong>
+                                    <span class="block font-light">18.07.2023</span>
+                                </p>
+                            </div>
+                            <span class="table bg-[#62BB00] px-2.5 rounded-md font-light">Доставлено</span>
+                        </div>
+                        <div class="bg-white py-4 px-5">
+                            <p class="mb-2.5">
+                                <strong class="block">Вид товара:</strong>
+                                <span class="block font-light">Вода в бутилированной бутылке</span>
+                            </p>
+                            <div class="flex mb-2.5">
+                                <p>
+                                    <strong class="block">Кол-во:</strong>
+                                    <span class="block font-light">3</span>
+                                </p>
+                                <p class="ml-7">
+                                    <strong class="block">Стоимость 1 единицы:</strong>
+                                    <span class="block font-light">15 000 сум</span>
+                                </p>
+                            </div>
+                            <p class="">
+                                <strong class="block">Сумма к оплате:</strong>
+                                <span class="block font-bold text-[#1CBBEE]">45 000 сум</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-[#F2F4F7] rounded-[10px] overflow-hidden mb-4 text-sm leading-6 text-black">
+                        <div class="bg-[#F2F4F7] pt-5 pb-2.5 px-5">
+                            <div class="flex mb-2.5">
+                                <p>
+                                    <strong class="block">Дата заказа:</strong>
+                                    <span class="block font-light">18.07.2023</span>
+                                </p>
+                                <p class="ml-7">
+                                    <strong class="block">Дата доставки:</strong>
+                                    <span class="block font-light">18.07.2023</span>
+                                </p>
+                            </div>
+                            <span class="table bg-[#E9573F] px-2.5 rounded-md font-light">Не доставлено</span>
+                        </div>
+                        <div class="bg-white py-4 px-5">
+                            <p class="mb-2.5">
+                                <strong class="block">Вид товара:</strong>
+                                <span class="block font-light">Вода в бутилированной бутылке</span>
+                            </p>
+                            <div class="flex mb-2.5">
+                                <p>
+                                    <strong class="block">Кол-во:</strong>
+                                    <span class="block font-light">3</span>
+                                </p>
+                                <p class="ml-7">
+                                    <strong class="block">Стоимость 1 единицы:</strong>
+                                    <span class="block font-light">15 000 сум</span>
+                                </p>
+                            </div>
+                            <p class="">
+                                <strong class="block">Сумма к оплате:</strong>
+                                <span class="block font-bold text-[#1CBBEE]">45 000 сум</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block w-full p-3 text-lg font-bold text-center bg-[#F2F4F7] rounded-full">Еще открыть</a>
+                </div>
+                <!--Mobile Articles History End-->
+            </div>
+        </div>
+    </div>
+</main>
+<!--Main Content End-->
+
+<!--Footer-->
+<footer>
+    <div class="xl:hidden container mx-auto">
+        <a href="#" class="flex items-center justify-center bg-[#1CBBEE] text-white p-1.5 w-full rounded-full mt-10 shadow-[0_20px_20px_rgba(0,0,0,0.2)]">
+            <img src="assets/images/icons/icon-telegram-white.svg" alt="Telegram">
+            <span class="text-center text-xs leading-[22px] font-light ml-4">Заказать через <strong class="block text-sm leading-[18px]font-bold">телеграмм бот</strong></span>
+        </a>
+    </div>
+    <div class="container mx-auto lg:py-8 py-4 overflow-hidden border-t border-[#98A2B3] lg:mt-20 mt-10">
+        <div class="grid lg:grid-cols-11 grid-cols-10 lg:gap-8 gap-4">
+            <div class="col-span-5 grid lg:flex justify-between items-center">
+                <div class="max-lg:hidden">
+                    <img src="assets/images/logo.svg" alt="Veva" class="w-full">
+                </div>
+                <div class="max-lg:order-2">
+                    <p class="font-light lg:text-black text-[#98A2B3] text-xs lg:leading-6 leading-5">VEVA © <br> Все права защищены. 2023</p>
+                </div>
+                <div class="max-lg:order-1">
+                    <ul class="text-black text-xs leading-6">
+                        <li><a href="#" class="font-light">Договор оферты</a></li>
+                        <li><a href="#" class="font-light">Сертификаты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-span-5 lg:col-start-7 flex lg:justify-between lg:items-center items-end max-lg:flex-col-reverse">
+                <div class="flex items-center gap-3">
+                    <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt="Facebook" class="max-lg:w-8"></a>
+                    <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt="Instagram" class="max-lg:w-8"></a>
+                    <a href="#" class="xl:flex hidden items-center  border border-[#1CBBEE] rounded-full py-2 px-5">
+                        <img src="assets/images/icons/icon-telegram.svg" alt="Telegram" class="mr-2.5">
+                        <span class="font-light text-black text-xs leading-[1.1rem] block">
+                            Заказать через <strong class="block font-semibold">телеграмм бот</strong>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <p class="font-light text-black lg:text-lg lg:leading-7 text-xs leading-5 text-right max-lg:mb-1.5">Телефон: <br>
+                        <a href="tel:+998 55 519 90 90" class="font-bold lg:text-2xl lg:leading-10 text-lg">+998 55 519 90 90</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer End-->
+
+<!--Login modal -->
+<div id="login-modal" tabindex="-1" aria-hidden="true" class="modal-block hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-[31rem] max-h-full">
+        <div class="relative bg-transparent">
+            <div class="table max-xl:w-full relative z-10">
+                <ul class="flex flex-wrap text-lg font-bold backdrop-blur-sm bg-black/10 rounded-t-lg text-center"
+                    id="tab"
+                    data-tabs-toggle="#tab-content"
+                    data-tabs-active-classes="text-[#1CBBEE] bg-white rounded-t-lg"
+                    data-tabs-inactive-classes="text-white"
+                    role="tablist">
+                    <li class="max-xl:w-1/2" role="presentation">
+                        <button class="inline-block pt-5 pb-4 px-8 max-xl:w-full"
+                                id="individual-styled-tab"
+                                data-tabs-target="#styled-individual"
+                                type="button"
+                                role="tab"
+                                aria-controls="individual"
+                                aria-selected="false">Физ. лицо</button>
+                    </li>
+                    <li class="max-xl:w-1/2" role="presentation">
+                        <button class="inline-block pt-5 pb-4 px-8 max-xl:w-full"
+                                id="legal-styled-tab"
+                                data-tabs-target="#styled-legal"
+                                type="button"
+                                role="tab"
+                                aria-controls="legal"
+                                aria-selected="false">Юр. лицо</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-content">
+                <div class="hidden relative pt-9 pb-10 px-7 bg-white rounded-b-[1.25rem] xl:rounded-tr-[1.25rem] shadow-2xl"
+                     id="styled-individual"
+                     role="tabpanel"
+                     aria-labelledby="individual-tab">
+                    <button type="button" class="absolute top-2.5 right-2.5" data-modal-hide="login-modal">
+                        <img src="assets/images/icons/modal-close.svg" alt="">
+                    </button>
+
+                    <!-- Вход в личный кабинет -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Вход в личный кабинет</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-7 rounded-[0.625rem]">
+                                <span class="text-black text-lg font-light pl-3.5">+998</span>
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light pl-2.5 p-3.5 border-none w-full" placeholder="00 000-00-00">
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Получить СМС</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Введите код из СМС -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Введите код из СМС</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-7 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="000-000">
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Войти в кабинет</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg">Повторить отправку кода (54 сек)</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Регистрация -->
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Регистрация</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Ваша фамилия и имя">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <span class="text-black text-lg font-light pl-3.5">+998</span>
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light pl-2.5 p-3.5 border-none w-full" placeholder="00 000-00-00">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-6 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Укажите адрес доставки">
+                            </div>
+                            <div class="custom-form-checkbox !mb-7">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hidden relative pt-9 pb-10 px-7 bg-white rounded-b-[1.25rem] xl:rounded-tr-[1.25rem] shadow-2xl"
+                     id="styled-legal"
+                     role="tabpanel"
+                     aria-labelledby="legal-tab">
+                    <button type="button" class="absolute top-2.5 right-2.5" data-modal-hide="login-modal">
+                        <img src="assets/images/icons/modal-close.svg" alt="">
+                    </button>
+                    <div>
+                        <h3 class="text-black text-[2rem] leading-[2.625rem] font-bold mb-6">Вход в личный кабинет</h3>
+                        <form action="">
+                            <div class="bg-[#F2F4F7] flex items-center mb-4 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Логин">
+                            </div>
+                            <div class="bg-[#F2F4F7] flex items-center mb-6 rounded-[0.625rem]">
+                                <input type="text" class="bg-transparent text-black text-lg placeholder:text-[#98A2B3] font-light p-3.5 border-none w-full" placeholder="Пароль">
+                            </div>
+                            <div class="custom-form-checkbox !mb-7">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full p-3.5 rounded-full bg-black text-white text-lg font-bold mb-5">Зарегистрироваться</button>
+                            <div class="text-center">
+                                <button type="button" class="text-[#98A2B3] text-lg mb-5">Забыли пароль? Восстановить.</button>
+                            </div>
+                            <p class="text-base text-black">Для регистрации обратитесь к менеджеру по телефону: <a href="tel:+998 55 519 90 90" class="font-bold">+998 55 519 90 90</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Login modal END-->
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

@@ -12407,6 +12407,11 @@ video {
   text-decoration-line: underline;
 }
 
+.underline-offset-4
+{
+  text-underline-offset: 4px;
+}
+
 .shadow
 {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -12901,7 +12906,6 @@ body.mobile-menu-active #mobile-menu .shape {
 .intro .slick-slide.slick-current .item > a, .intro .slick-slide.slick-current .item > button {
   opacity: 1;
   height: 100%;
-  padding: 0.75rem 2.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 20px;
 }
 
@@ -13018,7 +13022,7 @@ body.mobile-menu-active #mobile-menu .shape {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  padding: 0;
+  padding: 0.75rem 2.5rem;
   background-color: black;
   border-radius: 100px;
   display: table;

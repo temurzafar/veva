@@ -56,8 +56,8 @@ $(document).ready(function(){
     })
 
     // BANNER CARDS SECTION
-    $(document).on('click', '.slick-cards .card-activation, .slick-cards .dots button', function(e){
-        var index = e.target.tagName === 'BUTTON' ? $(this).index() : $(this).parents('.card').index()
+    $(document).on('click', '.slick-cards .card, .slick-cards .dots button', function(e){
+        var index = e.target.tagName === 'BUTTON' ? $(this).index() : $(this).index()
 
         $('.slick-cards .card').removeClass('active');
         $('.slick-cards .dots button').removeClass('active');

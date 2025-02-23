@@ -341,7 +341,6 @@ body.mobile-menu-active #mobile-menu .shape {
 .intro .slick-slide.slick-current .item > a, .intro .slick-slide.slick-current .item > button {
   opacity: 1;
   height: 100%;
-  padding: 0.75rem 2.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 20px;
 }
 .intro .slick-slide .item {
@@ -445,7 +444,7 @@ body.mobile-menu-active #mobile-menu .shape {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  padding: 0;
+  padding: 0.75rem 2.5rem;
   background-color: black;
   border-radius: 100px;
   display: table;

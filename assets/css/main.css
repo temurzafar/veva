@@ -11477,6 +11477,11 @@ video {
   bottom: 0px;
 }
 
+.bottom-12
+{
+  bottom: 3rem;
+}
+
 .bottom-\[10\%\]
 {
   bottom: 10%;
@@ -11500,6 +11505,11 @@ video {
 .right-0
 {
   right: 0px;
+}
+
+.right-12
+{
+  right: 3rem;
 }
 
 .right-2\.5
@@ -11530,6 +11540,36 @@ video {
 .top-\[20\%\]
 {
   top: 20%;
+}
+
+.bottom-4
+{
+  bottom: 1rem;
+}
+
+.right-4
+{
+  right: 1rem;
+}
+
+.bottom-6
+{
+  bottom: 1.5rem;
+}
+
+.right-6
+{
+  right: 1.5rem;
+}
+
+.bottom-5
+{
+  bottom: 1.25rem;
+}
+
+.right-5
+{
+  right: 1.25rem;
 }
 
 .z-10
@@ -12013,6 +12053,12 @@ video {
   background-color: rgb(98 187 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#67C2C7\]
+{
+  --tw-bg-opacity: 1;
+  background-color: rgb(103 194 199 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#E9573F\]
 {
   --tw-bg-opacity: 1;
@@ -12100,6 +12146,12 @@ video {
   padding: 1.25rem;
 }
 
+.px-1
+{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-10
 {
   padding-left: 2.5rem;
@@ -12182,6 +12234,12 @@ video {
 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
+}
+
+.py-0\.5
+{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
 }
 
 .pb-10
@@ -12358,6 +12416,11 @@ video {
 .leading-\[22px\]
 {
   line-height: 22px;
+}
+
+.leading-4
+{
+  line-height: 1rem;
 }
 
 .\!text-\[\#98A2B3\]
@@ -14876,6 +14939,16 @@ body {
 
 @media (min-width: 1025px)
 {
+  .lg\:bottom-12
+{
+    bottom: 3rem;
+  }
+
+  .lg\:right-12
+{
+    right: 3rem;
+  }
+
   .lg\:col-start-7
 {
     grid-column-start: 7;

@@ -209,6 +209,10 @@ body{
   background: #E4EAF3 url("../images/intro-bg.png") no-repeat center;
   background-size: cover;
   padding-top: 9rem;
+  .slider-wrapper .slider{
+    max-width: 40%;
+    margin: 0 auto;
+  }
   .slick-list{
     overflow: visible;
   }
@@ -276,7 +280,7 @@ body{
         }
         .info{
           position: absolute;
-          right: 15%;
+          right: 20%;
           top: 15%;
           button{
             display: none;

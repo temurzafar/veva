@@ -11477,9 +11477,9 @@ video {
   bottom: 0px;
 }
 
-.bottom-12
+.bottom-5
 {
-  bottom: 3rem;
+  bottom: 1.25rem;
 }
 
 .bottom-\[10\%\]
@@ -11507,14 +11507,14 @@ video {
   right: 0px;
 }
 
-.right-12
-{
-  right: 3rem;
-}
-
 .right-2\.5
 {
   right: 0.625rem;
+}
+
+.right-5
+{
+  right: 1.25rem;
 }
 
 .right-\[20\%\]
@@ -11540,36 +11540,6 @@ video {
 .top-\[20\%\]
 {
   top: 20%;
-}
-
-.bottom-4
-{
-  bottom: 1rem;
-}
-
-.right-4
-{
-  right: 1rem;
-}
-
-.bottom-6
-{
-  bottom: 1.5rem;
-}
-
-.right-6
-{
-  right: 1.5rem;
-}
-
-.bottom-5
-{
-  bottom: 1.25rem;
-}
-
-.right-5
-{
-  right: 1.25rem;
 }
 
 .z-10
@@ -12236,12 +12206,6 @@ video {
   padding-bottom: 2.25rem;
 }
 
-.py-0\.5
-{
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-}
-
 .pb-10
 {
   padding-bottom: 2.5rem;
@@ -12416,11 +12380,6 @@ video {
 .leading-\[22px\]
 {
   line-height: 22px;
-}
-
-.leading-4
-{
-  line-height: 1rem;
 }
 
 .\!text-\[\#98A2B3\]
@@ -12922,6 +12881,11 @@ body.mobile-menu-active #mobile-menu .shape {
   padding-top: 9rem;
 }
 
+.intro .slider-wrapper .slider {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
 .intro .slick-list {
   overflow: visible;
 }
@@ -12996,7 +12960,7 @@ body.mobile-menu-active #mobile-menu .shape {
 
 .intro .slick-slide .item .item-content .info {
   position: absolute;
-  right: 15%;
+  right: 20%;
   top: 15%;
 }
 
@@ -14223,6 +14187,10 @@ html {
 
   .slick-dots {
     margin-top: 15px;
+  }
+
+  .intro .slider-wrapper .slider {
+    max-width: none;
   }
 
   .intro .slick-slide .item > button, .intro .slick-slide .item > a {

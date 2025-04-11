@@ -19,9 +19,9 @@ $(document).ready(function(){
     // INTRO SECTION
     $('.intro .slider').slick({
         infinite: false,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 1,
+        initialSlide: $('.intro .slider .item').length !== 3 ? 0 : 1,
         centerMode: true,
         swipe: false,
         dots: false,

@@ -164,6 +164,9 @@ html{ font-size: 100%; }
 
   ///// HOME PAGE
   .intro {
+    .slider-wrapper .slider{
+      max-width: none;
+    }
     .slick-slide {
       .item {
         >button, >a{

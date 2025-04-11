@@ -304,6 +304,10 @@ body.mobile-menu-active #mobile-menu .shape {
   background-size: cover;
   padding-top: 9rem;
 }
+.intro .slider-wrapper .slider {
+  max-width: 40%;
+  margin: 0 auto;
+}
 .intro .slick-list {
   overflow: visible;
 }
@@ -364,7 +368,7 @@ body.mobile-menu-active #mobile-menu .shape {
 }
 .intro .slick-slide .item .item-content .info {
   position: absolute;
-  right: 15%;
+  right: 20%;
   top: 15%;
 }
 .intro .slick-slide .item .item-content .info button {
@@ -1416,6 +1420,9 @@ html {
   }
   .slick-dots {
     margin-top: 15px;
+  }
+  .intro .slider-wrapper .slider {
+    max-width: none;
   }
   .intro .slick-slide .item > button, .intro .slick-slide .item > a {
     font-size: 14px;
